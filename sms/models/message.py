@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 from gateway import Gateway
 import uuidfield.fields
-import picklefield
+#import picklefield
 
 MESSAGE_STATUSES = (
     ('Unsent', 'Unsent'),
@@ -90,7 +90,8 @@ class Message(models.Model):
     gateway_message_id = models.CharField(max_length=128, blank=True,
                             null=True, editable=False)
 
-    reply_callback = picklefield.PickledObjectField(null=True, blank=True)
+    #reply_callback = picklefield.PickledObjectField(null=True, blank=True)
+    reply_callback = models.CharField(max_length=128,null=True, blank=True)
     gateway_charge = models.DecimalField(max_digits=10, decimal_places=5,
                             null=True, blank=True)
 
