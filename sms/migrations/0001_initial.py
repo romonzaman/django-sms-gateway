@@ -5,7 +5,7 @@ from django.db import models, migrations
 import jsonfield.fields
 from django.conf import settings
 import uuidfield.fields
-import picklefield.fields
+#import picklefield.fields
 
 
 class Migration(migrations.Migration):
